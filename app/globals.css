@@ -793,6 +793,560 @@ a:focus-visible {
   line-height: 1.75;
 }
 
+.experiences-section,
+.coaching-offers-section {
+  width: min(100% - 96px, 1440px);
+  margin: 0 auto;
+  border-top: 1px solid rgb(248 249 250 / 8%);
+  padding: 112px 0 120px;
+}
+
+.experiences-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 52px;
+}
+
+.experiences-heading h2,
+.coaching-offers-heading h2 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-bone);
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  line-height: 1.03;
+}
+
+.experiences-subtitle {
+  max-width: 400px;
+  margin: 0 0 5px;
+  color: var(--color-silver);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.testimonial-item {
+  min-width: 0;
+}
+
+.testimonial-poster {
+  position: relative;
+  aspect-ratio: 0.94 / 1;
+  overflow: hidden;
+  background: var(--color-obsidian);
+  isolation: isolate;
+}
+
+.testimonial-poster::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(18 18 18 / 4%) 20%, rgb(18 18 18 / 22%) 57%, rgb(18 18 18 / 78%) 100%);
+  content: '';
+  pointer-events: none;
+}
+
+.testimonial-poster img {
+  object-fit: cover;
+  filter: grayscale(0.35) saturate(0.55) brightness(0.72);
+  transition: transform 500ms ease, filter 500ms ease;
+}
+
+.testimonial-item:hover .testimonial-poster img {
+  transform: scale(1.025);
+  filter: grayscale(0.2) saturate(0.68) brightness(0.8);
+}
+
+.testimonial-poster-label {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  color: var(--color-bone);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.testimonial-play {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(248 249 250 / 52%);
+  border-radius: 50%;
+  background: rgb(18 18 18 / 28%);
+  color: var(--color-bone);
+}
+
+.testimonial-play svg {
+  width: 17px;
+  height: 17px;
+  margin-left: 2px;
+}
+
+.testimonial-play:disabled {
+  cursor: not-allowed;
+  opacity: 0.78;
+}
+
+.testimonial-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 15px;
+}
+
+.testimonial-caption p {
+  margin: 0;
+  color: var(--color-silver);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.testimonial-name {
+  color: var(--color-bone) !important;
+}
+
+.testimonial-type {
+  text-align: right;
+}
+
+.google-reviews {
+  margin-top: 74px;
+  border-top: 1px solid rgb(248 249 250 / 14%);
+  padding-top: 25px;
+}
+
+.google-reviews-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.google-reviews-kicker {
+  margin: 0 0 9px;
+  color: var(--color-silver);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.google-reviews-heading h3 {
+  margin: 0;
+  color: var(--color-bone);
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.google-reviews-link,
+.google-review-item a {
+  color: var(--color-silver-light);
+  font-size: 10px;
+  transition: color 180ms ease;
+}
+
+.google-reviews-link:hover,
+.google-review-item a:hover {
+  color: var(--color-bone);
+}
+
+.google-review-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgb(248 249 250 / 10%);
+}
+
+.google-review-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+  padding: 19px 24px 0 0;
+}
+
+.google-review-item + .google-review-item {
+  border-left: 1px solid rgb(248 249 250 / 10%);
+  padding-left: 22px;
+}
+
+.google-review-index {
+  color: var(--color-silver);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+.google-review-author {
+  margin: 0;
+  color: var(--color-bone);
+  font-size: 11px;
+}
+
+.google-review-excerpt {
+  min-height: 34px;
+  margin: 8px 0 10px;
+  color: var(--color-silver);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.about-ariel-section {
+  min-height: 620px;
+  border-top: 1px solid rgb(248 249 250 / 8%);
+}
+
+.about-ariel-lede {
+  max-width: 540px !important;
+  color: var(--color-bone) !important;
+  font-size: clamp(16px, 1.6vw, 20px) !important;
+  line-height: 1.7 !important;
+}
+
+.about-credentials {
+  margin: 30px 0 0;
+  color: var(--color-silver-light);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
+
+.about-ariel-bio {
+  max-width: 490px !important;
+  margin-top: 25px !important;
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+}
+
+.about-ariel-image,
+.online-coaching-image {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+  background: var(--color-obsidian);
+  isolation: isolate;
+}
+
+.about-ariel-image {
+  aspect-ratio: 0.91 / 1;
+}
+
+.about-ariel-image::after,
+.online-coaching-image::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(18 18 18 / 64%), transparent 26%, transparent 75%, rgb(18 18 18 / 16%));
+  content: '';
+  pointer-events: none;
+}
+
+.about-ariel-image img,
+.online-coaching-image img {
+  object-fit: cover;
+  filter: saturate(0.62) contrast(1.03);
+}
+
+.about-ariel-image figcaption,
+.online-coaching-image figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 16px;
+  bottom: 15px;
+  left: 16px;
+  color: rgb(248 249 250 / 76%);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.online-coaching-section {
+  min-height: 660px;
+  border-top: 1px solid rgb(248 249 250 / 8%);
+}
+
+.online-coaching-copy h2 {
+  max-width: 610px;
+  font-size: clamp(39px, 4.45vw, 64px);
+}
+
+.online-coaching-copy > p:not(.eyebrow) {
+  max-width: 550px;
+  margin: 25px 0 0;
+  color: var(--color-silver);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.online-coaching-image {
+  aspect-ratio: 1.48 / 1;
+  margin-top: 32px;
+}
+
+.online-benefits {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgb(248 249 250 / 18%);
+  border-bottom: 1px solid rgb(248 249 250 / 18%);
+  list-style: none;
+}
+
+.online-benefit {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 16px;
+  padding: 27px 0;
+  border-bottom: 1px solid rgb(248 249 250 / 12%);
+  animation: step-reveal 500ms ease-out both;
+}
+
+.online-benefit:last-child {
+  border-bottom: 0;
+}
+
+.online-benefit-number {
+  padding-top: 3px;
+  color: var(--color-silver);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.online-benefit h3 {
+  margin: 0;
+  color: var(--color-bone);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.online-benefit p {
+  max-width: 360px;
+  margin: 10px 0 0;
+  color: var(--color-silver);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.online-benefit:nth-child(2) { animation-delay: 70ms; }
+.online-benefit:nth-child(3) { animation-delay: 140ms; }
+
+.coaching-offers-section {
+  padding-bottom: 144px;
+}
+
+.coaching-offers-heading {
+  max-width: 830px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.coaching-offers-heading .editorial-eyebrow {
+  margin-bottom: 18px;
+}
+
+.coaching-offers-heading h2 {
+  max-width: none;
+  font-size: clamp(40px, 5vw, 68px);
+}
+
+.coaching-offers-heading > p:last-child {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: var(--color-silver);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+
+.plan-card {
+  --plan-accent: #b0b0b0;
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  border: 1px solid rgb(248 249 250 / 11%);
+  padding: 32px 28px 28px;
+  background: #171717;
+  animation: step-reveal 540ms ease-out both;
+}
+
+.plan-card-basic { --plan-accent: #8e6bbf; }
+.plan-card-personalized { --plan-accent: #f2f2f2; }
+.plan-card-private { --plan-accent: #c5a059; }
+.plan-card-featured {
+  border-color: rgb(242 242 242 / 38%);
+  background: #1b1b1b;
+}
+.plan-card-private { border-color: rgb(197 160 89 / 32%); }
+.plan-card-private .plan-price > span:first-child { color: #f2bc57; }
+.plan-card:nth-child(2) { animation-delay: 70ms; }
+.plan-card:nth-child(3) { animation-delay: 140ms; }
+
+.plan-badge {
+  position: absolute;
+  top: -11px;
+  right: 24px;
+  margin: 0;
+  border: 1px solid rgb(242 242 242 / 36%);
+  padding: 6px 10px;
+  background: var(--color-carbon);
+  color: var(--color-silver-light);
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.plan-card-top {
+  min-height: 106px;
+}
+
+.plan-category {
+  margin: 0 0 16px;
+  color: var(--plan-accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.plan-card-top h3 {
+  max-width: 260px;
+  margin: 0;
+  color: var(--color-bone);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 28px 0 0;
+  color: var(--color-bone);
+}
+
+.plan-price > span:first-child {
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.plan-duration {
+  color: var(--color-silver);
+  font-size: 11px;
+}
+
+.plan-description {
+  min-height: 82px;
+  margin: 19px 0 0;
+  color: var(--color-silver);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 23px 0 28px;
+  padding: 20px 0 0;
+  border-top: 1px solid rgb(248 249 250 / 12%);
+  list-style: none;
+}
+
+.plan-features li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--color-silver-light);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.plan-features li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--plan-accent);
+  content: '';
+}
+
+.plan-cta {
+  width: 100%;
+  margin-top: auto;
+  min-height: 50px;
+}
+
+.plan-details {
+  margin-top: auto;
+  border-top: 1px solid rgb(248 249 250 / 15%);
+  padding-top: 15px;
+}
+
+.plan-details summary {
+  width: fit-content;
+  color: var(--color-silver-light);
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan-details summary:hover {
+  color: var(--color-bone);
+}
+
+.plan-details-content {
+  padding-top: 10px;
+}
+
+.plan-details-content p {
+  margin: 8px 0 0;
+  color: var(--color-silver);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.plan-capacity-note {
+  margin: 14px 0 0;
+  color: var(--color-silver);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
 @keyframes step-reveal {
   from {
     transform: translateY(8px);
@@ -835,7 +1389,9 @@ a:focus-visible {
   .vsl-section,
   .editorial-section,
   .process-section,
-  .dimensions-section {
+  .dimensions-section,
+  .experiences-section,
+  .coaching-offers-section {
     width: min(100% - 64px, 1440px);
   }
 
@@ -921,6 +1477,37 @@ a:focus-visible {
   .dimension-number {
     margin-bottom: 14px;
   }
+
+  .experiences-section,
+  .coaching-offers-section {
+    padding-block: 90px 96px;
+  }
+
+  .experiences-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+
+  .testimonial-grid {
+    gap: 16px;
+  }
+
+  .google-reviews {
+    margin-top: 58px;
+  }
+
+  .plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 26px;
+  }
+
+  .plan-card:last-child {
+    width: calc(50% - 8px);
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 760px) {
@@ -936,7 +1523,9 @@ a:focus-visible {
 
   .editorial-section,
   .process-section,
-  .dimensions-section {
+  .dimensions-section,
+  .experiences-section,
+  .coaching-offers-section {
     width: calc(100% - 40px);
   }
 
@@ -1249,6 +1838,207 @@ a:focus-visible {
     max-width: none;
     margin-top: 5px;
     font-size: 12px;
+  }
+
+  .experiences-section,
+  .coaching-offers-section {
+    padding-block: 78px 86px;
+  }
+
+  .experiences-heading {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .experiences-heading h2,
+  .coaching-offers-heading h2 {
+    font-size: clamp(36px, 9vw, 48px);
+    letter-spacing: -0.065em;
+  }
+
+  .experiences-subtitle {
+    font-size: 12px;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 0 20px 12px 0;
+    scroll-padding-inline: 0 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: rgb(248 249 250 / 25%) transparent;
+    scrollbar-width: thin;
+  }
+
+  .testimonial-item {
+    flex: 0 0 82vw;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-poster {
+    aspect-ratio: 0.94 / 1;
+  }
+
+  .testimonial-caption {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .testimonial-type {
+    text-align: left;
+  }
+
+  .google-reviews {
+    margin-top: 42px;
+    padding-top: 20px;
+  }
+
+  .google-reviews-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .google-reviews-heading h3 {
+    font-size: 18px;
+  }
+
+  .google-review-list {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .google-review-item {
+    flex: 0 0 82vw;
+    min-height: 118px;
+    padding: 17px 18px 12px 0;
+    scroll-snap-align: start;
+  }
+
+  .google-review-item + .google-review-item {
+    padding-left: 18px;
+  }
+
+  .google-review-excerpt {
+    min-height: 0;
+  }
+
+  .about-ariel-section {
+    gap: 28px;
+  }
+
+  .about-credentials {
+    gap: 8px 0;
+    margin-top: 23px;
+    font-size: 8px;
+  }
+
+  .about-ariel-image {
+    aspect-ratio: 1.1 / 1;
+  }
+
+  .online-coaching-section {
+    gap: 34px;
+  }
+
+  .online-coaching-copy h2 {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+
+  .online-coaching-copy > p:not(.eyebrow) {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .online-coaching-image {
+    aspect-ratio: 1.2 / 1;
+    margin-top: 25px;
+  }
+
+  .online-benefit {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    padding: 22px 0;
+  }
+
+  .online-benefit h3 {
+    font-size: 16px;
+  }
+
+  .online-benefit p {
+    margin-top: 7px;
+    font-size: 11px;
+  }
+
+  .coaching-offers-heading {
+    margin: 0 0 38px;
+    text-align: left;
+  }
+
+  .coaching-offers-heading > p:last-child {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .plan-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .plan-card,
+  .plan-card:last-child {
+    width: auto;
+    grid-column: auto;
+    padding: 28px 22px 24px;
+  }
+
+  .plan-card-featured {
+    margin-block: 3px;
+    border-color: rgb(242 242 242 / 48%);
+  }
+
+  .plan-card-top {
+    min-height: auto;
+  }
+
+  .plan-card-top h3 {
+    max-width: 300px;
+    font-size: 20px;
+  }
+
+  .plan-price {
+    margin-top: 26px;
+  }
+
+  .plan-price > span:first-child {
+    font-size: 46px;
+  }
+
+  .plan-description {
+    min-height: 0;
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .plan-features {
+    gap: 11px;
+    margin: 20px 0 25px;
+    padding-top: 18px;
+  }
+
+  .plan-features li {
+    font-size: 11px;
+  }
+
+  .plan-cta {
+    min-height: 54px;
   }
 }
 

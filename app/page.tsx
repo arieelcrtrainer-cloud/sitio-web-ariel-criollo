@@ -6,6 +6,10 @@ import { ProblemSection } from '@/components/home/problem-section'
 import { ReframeSection } from '@/components/home/reframe-section'
 import { ProcessSection } from '@/components/home/process-section'
 import { CoachingDimensionsSection } from '@/components/home/coaching-dimensions-section'
+import { ExperiencesSection } from '@/components/home/experiences-section'
+import { AboutArielSection } from '@/components/home/about-ariel-section'
+import { OnlineCoachingSection } from '@/components/home/online-coaching-section'
+import { CoachingOffersSection } from '@/components/home/coaching-offers-section'
 
 export default function Page() {
   return (
@@ -19,6 +23,10 @@ export default function Page() {
         <ReframeSection />
         <ProcessSection />
         <CoachingDimensionsSection />
+        <ExperiencesSection />
+        <AboutArielSection />
+        <OnlineCoachingSection />
+        <CoachingOffersSection />
       </main>
     </>
   )

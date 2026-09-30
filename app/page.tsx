@@ -10,6 +10,12 @@ import { ExperiencesSection } from '@/components/home/experiences-section'
 import { AboutArielSection } from '@/components/home/about-ariel-section'
 import { OnlineCoachingSection } from '@/components/home/online-coaching-section'
 import { CoachingOffersSection } from '@/components/home/coaching-offers-section'
+import { CoachingComparisonSection } from '@/components/home/coaching-comparison-section'
+import { CoachingDiagnostic } from '@/components/home/coaching-diagnostic'
+import { RiskReductionSection } from '@/components/home/risk-reduction-section'
+import { FaqSection } from '@/components/home/faq-section'
+import { FinalCtaSection } from '@/components/home/final-cta-section'
+import { SiteFooter } from '@/components/home/site-footer'
 
 export default function Page() {
   return (
@@ -27,7 +33,13 @@ export default function Page() {
         <AboutArielSection />
         <OnlineCoachingSection />
         <CoachingOffersSection />
+        <CoachingComparisonSection />
+        <CoachingDiagnostic />
+        <RiskReductionSection />
+        <FaqSection />
+        <FinalCtaSection />
       </main>
+      <SiteFooter />
     </>
   )
 }

@@ -80,14 +80,12 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
         </details>
       ) : (
         <a className="button button-primary plan-cta" href="#evaluacion">
-          Solicitar evaluación
+          Solicitar evaluación gratuita
         </a>
       )}
 
       {plan.tone === 'private' && (
-        <p className="plan-capacity-note">
-          Disponibilidad y número de plazas pendientes de confirmar.
-        </p>
+        <p className="plan-capacity-note">5 plazas activas</p>
       )}
     </article>
   )

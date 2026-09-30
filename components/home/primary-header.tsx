@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const navigation = [
-  { label: 'Cómo funciona', href: '#como-funciona' },
+  { label: 'Cómo funciona', href: '#proceso' },
   { label: 'Coaching', href: '#coaching' },
   { label: 'Resultados', href: '#resultados' },
   { label: 'Sobre Ariel', href: '#sobre-ariel' },

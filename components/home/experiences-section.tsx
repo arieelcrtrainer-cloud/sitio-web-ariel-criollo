@@ -1,17 +1,24 @@
-import Image from 'next/image'
-
 const testimonials = [
   {
-    image: '/images/editorial-process.png',
-    type: 'Coaching por confirmar',
+    name: 'Melissa Fuentes',
+    coaching: 'Coaching Privado 1:1',
+    coachingType: 'private',
+    videoId: 'sitnd2AwJyg',
+    format: 'portrait',
   },
   {
-    image: '/images/editorial-planning.png',
-    type: 'Coaching por confirmar',
+    name: 'Fernando Romero',
+    coaching: 'Coaching Privado 1:1',
+    coachingType: 'private',
+    videoId: 'eUC75jP3_3k',
+    format: 'landscape',
   },
   {
-    image: '/images/online-coaching-placeholder.png',
-    type: 'Coaching por confirmar',
+    name: 'Mary Silva',
+    coaching: 'Coaching Personalizado',
+    coachingType: 'personalized',
+    videoId: 'CjSAyyBX4q4',
+    format: 'portrait',
   },
 ]
 
@@ -31,33 +38,24 @@ export function ExperiencesSection() {
         </p>
       </div>
 
-      <div className="testimonial-grid" aria-label="Espacios para testimonios en video" tabIndex={0}>
-        {testimonials.map((testimonial, index) => (
-          <article className="testimonial-item" key={testimonial.image}>
-            <div className="testimonial-poster">
-              <Image
-                src={testimonial.image}
-                alt=""
-                fill
-                sizes="(max-width: 760px) 82vw, (max-width: 1050px) 42vw, 30vw"
+      <div className="testimonial-grid" aria-label="Testimonios en video">
+        {testimonials.map((testimonial) => (
+          <article className="testimonial-item" key={testimonial.videoId}>
+            <div className={`testimonial-video-frame testimonial-video-${testimonial.format}`}>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${testimonial.videoId}?rel=0&playsinline=1`}
+                title={`Testimonio en video de ${testimonial.name}`}
                 loading="lazy"
-                quality={72}
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
               />
-              <span className="testimonial-poster-label">Video testimonial real pendiente</span>
-              <button
-                className="testimonial-play"
-                type="button"
-                disabled
-                aria-label={`Video testimonial ${index + 1}, pendiente de cargar`}
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                  <path d="m9 6 9 6-9 6V6Z" fill="currentColor" />
-                </svg>
-              </button>
             </div>
             <div className="testimonial-caption">
-              <p className="testimonial-name">Nombre real pendiente</p>
-              <p className="testimonial-type">{testimonial.type}</p>
+              <p className="testimonial-name">{testimonial.name}</p>
+              <p className={`testimonial-type testimonial-type-${testimonial.coachingType}`}>
+                {testimonial.coaching}
+              </p>
             </div>
           </article>
         ))}

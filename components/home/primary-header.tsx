@@ -30,7 +30,7 @@ export function PrimaryHeader() {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className={`site-header${isScrolled ? ' is-scrolled' : ''}`}>
+    <header className={`site-header${isScrolled ? ' is-scrolled' : ''}${isMenuOpen ? ' menu-open' : ''}`}>
       <div className="header-inner">
         <Link className="wordmark" href="#inicio" aria-label="Ariel Criollo, inicio" onClick={closeMenu}>
           ARIEL CRIOLLO
@@ -45,7 +45,8 @@ export function PrimaryHeader() {
         </nav>
 
         <a className="button button-primary conversion-cta header-cta" href="#diagnostico">
-          Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
+          <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
+          <span className="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <button
@@ -77,7 +78,8 @@ export function PrimaryHeader() {
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
+            <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
+            <span className="cta-arrow" aria-hidden="true">→</span>
           </a>
         </nav>
       </div>
@@ -87,8 +89,9 @@ export function PrimaryHeader() {
 
 export function PrimaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary ${className}`.trim()} href="#diagnostico">
-      Iniciar diagnóstico gratuito
+    <a className={`button button-primary conversion-cta ${className}`.trim()} href="#diagnostico">
+      <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
+      <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
   )
 }
@@ -96,15 +99,17 @@ export function PrimaryCta({ className = '' }: { className?: string }) {
 export function DiagnosticCta({ className = '' }: { className?: string }) {
   return (
     <a className={`button button-primary conversion-cta ${className}`.trim()} href="#diagnostico">
-      Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
+      <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
+      <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
   )
 }
 
 export function SecondaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary button-secondary ${className}`.trim()} href="#diagnostico">
-      Iniciar diagnóstico gratuito
+    <a className={`button button-primary button-secondary conversion-cta ${className}`.trim()} href="#diagnostico">
+      <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
+      <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
   )
 }

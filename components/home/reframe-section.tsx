@@ -23,7 +23,7 @@ export function ReframeSection() {
         <p>
           Por eso una estrategia útil no se limita a decirte qué hacer. También debe permitirte saber qué mantener, qué ajustar y cuándo hacerlo.
         </p>
-        <p className="reframe-conclusion">Necesitas una estrategia diseñada para ti.</p>
+        <p className="reframe-conclusion highlight-accent">Necesitas una estrategia diseñada para ti.</p>
       </div>
     </section>
   )

@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { PrimaryCta } from '@/components/home/primary-header'
+import { DiagnosticCta } from '@/components/home/primary-header'
 
 export function VslSection() {
   const [requestedPlayback, setRequestedPlayback] = useState(false)
@@ -11,7 +11,7 @@ export function VslSection() {
     <section className="vsl-section" id="como-funciona" aria-labelledby="vsl-title">
       <div className="vsl-copy">
         <p className="eyebrow">Una decisión informada</p>
-        <h2 id="vsl-title">Antes de tomar una decisión, quiero darte información para que puedas decidir.</h2>
+        <h2 id="vsl-title">Antes de tomar una decisión, quiero darte información <strong>para que puedas decidir</strong>.</h2>
       </div>
 
       <div className="vsl-media-column">
@@ -42,7 +42,7 @@ export function VslSection() {
         <p className="vsl-status" aria-live="polite">
           {requestedPlayback ? 'El video de presentación estará disponible aquí próximamente.' : ''}
         </p>
-        <PrimaryCta className="vsl-cta" />
+        <DiagnosticCta className="vsl-cta" />
       </div>
     </section>
   )

@@ -18,7 +18,7 @@ function ResultCase({ label }: { label: string }) {
 export function ResultsSection() {
   return (
     <section className="results-section" id="resultados" aria-labelledby="results-title">
-      <div className="section-heading">
+      <div className="section-heading results-editorial-heading">
         <p className="eyebrow">El trabajo habla por sí mismo</p>
         <h2 id="results-title">Resultados reales</h2>
       </div>

@@ -44,8 +44,8 @@ export function PrimaryHeader() {
           ))}
         </nav>
 
-        <a className="button button-primary header-cta" href="#diagnostico">
-          Iniciar diagnóstico gratuito
+        <a className="button button-primary conversion-cta header-cta" href="#diagnostico">
+          Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <button
@@ -72,12 +72,12 @@ export function PrimaryHeader() {
             </a>
           ))}
           <a
-            className="button button-primary mobile-cta"
+            className="button button-primary conversion-cta mobile-cta"
             href="#diagnostico"
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Iniciar diagnóstico gratuito
+            Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
           </a>
         </nav>
       </div>
@@ -89,6 +89,14 @@ export function PrimaryCta({ className = '' }: { className?: string }) {
   return (
     <a className={`button button-primary ${className}`.trim()} href="#diagnostico">
       Iniciar diagnóstico gratuito
+    </a>
+  )
+}
+
+export function DiagnosticCta({ className = '' }: { className?: string }) {
+  return (
+    <a className={`button button-primary conversion-cta ${className}`.trim()} href="#diagnostico">
+      Solicitar diagnóstico gratuito <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
   )
 }

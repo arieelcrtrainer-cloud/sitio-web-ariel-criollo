@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { PrimaryCta } from '@/components/home/primary-header'
+import { DiagnosticCta } from '@/components/home/primary-header'
 
 export function HeroSection() {
   return (
@@ -19,7 +19,7 @@ export function HeroSection() {
           profesional que se adapta a tu vida.
         </p>
         <div className="hero-action">
-          <PrimaryCta className="hero-cta" />
+          <DiagnosticCta className="hero-cta" />
           <p>Evaluación inicial sin costo <span aria-hidden="true">·</span> Sin compromiso</p>
         </div>
       </div>

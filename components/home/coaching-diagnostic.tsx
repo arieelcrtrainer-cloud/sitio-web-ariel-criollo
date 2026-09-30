@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { PrimaryCta } from '@/components/home/primary-header'
 
 const questions = [
   {
@@ -189,8 +188,8 @@ export function CoachingDiagnostic() {
               {showReasons ? 'Ocultar motivos' : '¿Por qué este nivel encaja contigo?'}
             </button>
             {showReasons && <ul className="diagnostic-reasons">{reasons.length > 0 ? reasons.map((reason) => <li key={reason}>{reason}</li>) : <li>Buscas un nivel de acompañamiento acorde con tus respuestas y con la autonomía que prefieres.</li>}</ul>}
-            <p className="diagnostic-disclaimer">Esta recomendación se basa en tus respuestas. La evaluación gratuita permite revisar personalmente tu situación antes de comenzar.</p>
-            <div className="diagnostic-result-actions"><PrimaryCta /><button className="diagnostic-restart" type="button" onClick={restart}>Volver a empezar</button></div>
+            <p className="diagnostic-disclaimer">Esta recomendación se basa en tus respuestas y es orientativa. Para revisar tu caso personalmente, hace falta coordinar una evaluación con Ariel.</p>
+            <div className="diagnostic-result-actions"><a className="button button-primary" href="#coaching">Ver opciones de coaching</a><button className="diagnostic-restart" type="button" onClick={restart}>Volver a empezar</button></div>
           </div>
         )}
       </div>

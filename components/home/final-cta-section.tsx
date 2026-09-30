@@ -4,13 +4,13 @@ export function FinalCtaSection() {
   return (
     <section className="final-cta-section" id="evaluacion" aria-labelledby="final-cta-title">
       <div className="final-cta-content">
-        <p className="eyebrow editorial-eyebrow">Tu proceso empieza con una conversación</p>
-        <h2 id="final-cta-title">Tu siguiente paso es saber qué necesitas.</h2>
+        <p className="eyebrow editorial-eyebrow">Encuentra tu punto de partida</p>
+        <h2 id="final-cta-title">Elige el nivel de acompañamiento que necesitas.</h2>
         <p className="final-cta-description">
-          Cuéntame tu objetivo, tu punto de partida y qué te está impidiendo avanzar. Revisaremos si el coaching es adecuado para ti y qué nivel de acompañamiento tiene más sentido.
+          Responde unas preguntas sobre tus objetivos y cómo prefieres entrenar. Recibirás una recomendación orientativa antes de elegir cómo continuar.
         </p>
         <PrimaryCta className="final-cta-button" />
-        <p className="final-cta-note">Sin compromiso.</p>
+        <p className="final-cta-note">Sin compromiso. El diagnóstico no envía tus respuestas.</p>
       </div>
     </section>
   )

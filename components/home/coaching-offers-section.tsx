@@ -79,8 +79,8 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
           </div>
         </details>
       ) : (
-        <a className="button button-primary plan-cta" href="#evaluacion">
-          Solicitar evaluación gratuita
+        <a className="button button-primary plan-cta" href="#diagnostico">
+          Descubrir mi nivel de coaching
         </a>
       )}
 

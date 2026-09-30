@@ -44,8 +44,8 @@ export function PrimaryHeader() {
           ))}
         </nav>
 
-        <a className="button button-primary header-cta" href="#evaluacion">
-          Solicitar evaluación gratuita
+        <a className="button button-primary header-cta" href="#diagnostico">
+          Iniciar diagnóstico gratuito
         </a>
 
         <button
@@ -73,11 +73,11 @@ export function PrimaryHeader() {
           ))}
           <a
             className="button button-primary mobile-cta"
-            href="#evaluacion"
+            href="#diagnostico"
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
           >
-            Solicitar evaluación gratuita
+            Iniciar diagnóstico gratuito
           </a>
         </nav>
       </div>
@@ -87,16 +87,16 @@ export function PrimaryHeader() {
 
 export function PrimaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary ${className}`.trim()} href="#evaluacion">
-      Solicitar evaluación gratuita
+    <a className={`button button-primary ${className}`.trim()} href="#diagnostico">
+      Iniciar diagnóstico gratuito
     </a>
   )
 }
 
 export function SecondaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary button-secondary ${className}`.trim()} href="#evaluacion">
-      Solicitar evaluación gratuita
+    <a className={`button button-primary button-secondary ${className}`.trim()} href="#diagnostico">
+      Iniciar diagnóstico gratuito
     </a>
   )
 }

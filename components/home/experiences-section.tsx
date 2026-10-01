@@ -20,27 +20,24 @@ const testimonials = [
 ]
 
 const googleSearchUrl = 'https://www.google.com/search?q=Ariel+Criollo+rese%C3%B1as'
-const googleReviewSearchUrl = (reviewer: string) =>
-  `https://www.google.com/search?q=${encodeURIComponent(`Ariel Criollo ${reviewer} reseña`)}`
-
 const googleReviews = [
   {
     name: 'Santiago Corrales',
     rating: '★★★★★',
     text: 'Ariel es súper paciente y se acopla a las necesidades de cada persona, si estás empezando te hace sentir cómodo, te enseña y motiva a continuar',
-    url: googleReviewSearchUrl('Santiago Corrales'),
+    url: 'https://share.google/Z1nOAbaQNH4W9xX1P',
   },
   {
     name: 'Mikaela Sempértegui',
     rating: '★★★★★',
     text: 'Un excelente entrenador. Siempre demuestra compromiso, paciencia y motivación. Explica las técnicas de forma clara y se asegura de que todos mejoren constantemente. Además de enfocarse en el rendimiento, también fomenta la disciplina y la confianza',
-    url: googleReviewSearchUrl('Mikaela Sempértegui'),
+    url: 'https://share.google/er0VvAQzRu9QKLQBz',
   },
   {
     name: 'Kary Lopez',
     rating: '★★★★★',
     text: 'Ariel es sin duda el profesional mas increíble que conozca, antes probé entrenar con varias personas de su medio y nadie me atinó, me hacían vivir contracturada y no tenía ganas de ejercitarme, los recomiendo 1000%. Su atención es personalizada y según tu necesidad, no solo ejercicios, el te enseña a ser integral, comida, descansos, ejercicio, etc',
-    url: googleReviewSearchUrl('Kary Lopez'),
+    url: 'https://share.google/LYQRqg1LjvfgfNduV',
   },
 ]
 
@@ -87,7 +84,7 @@ export function ExperiencesSection() {
             <h3 id="google-reviews-title">+85 reseñas en Google</h3>
           </div>
           <a className="google-reviews-link" href={googleSearchUrl} target="_blank" rel="noreferrer">
-            Ver reseña en Google <span aria-hidden="true">→</span>
+            Ver reseñas en Google <span aria-hidden="true">→</span>
           </a>
         </div>
 

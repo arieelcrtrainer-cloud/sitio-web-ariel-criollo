@@ -12,11 +12,9 @@ const rows = [
   { name: 'Ajustes', values: ['Limitados, dentro del alcance', 'Según evolución', 'Según necesidad'] },
   { name: 'Planificación de entrenamiento', values: ['Sí', 'Sí', 'Sí'] },
   { name: 'Estrategia nutricional', values: ['Base', 'Personalizada', 'Personalizada + adaptativa'] },
-  { name: 'NutriMind', values: ['No', 'Sí', 'Sí'] },
-  { name: 'Espacio de seguimiento', values: ['Básico', 'Sí', 'Sí'] },
+  { name: 'Herramientas de seguimiento', values: ['No', 'Sí', 'Sí'] },
   { name: 'Sesión inicial', values: ['No', '20–30 min', '45–60 min'] },
   { name: 'Acceso directo a Ariel', values: ['Limitado', 'Viernes, según sistema establecido', 'Lunes–viernes'] },
-  { name: 'Videoanálisis', values: ['No', 'Parcial', 'Completo'] },
   { name: 'Adaptación contextual', values: ['Limitada', 'Sí, dentro del alcance', 'Alta'] },
   { name: 'Evaluación de progreso', values: ['Sí', 'Sí', 'Profunda'] },
   { name: 'Nivel de autonomía', values: ['Alta', 'Media-alta', 'Media'] },
@@ -41,9 +39,9 @@ export function CoachingComparisonSection() {
               <th className="comparison-feature-head" scope="col">Acompañamiento</th>
               {plans.map((plan) => (
                 <th className={`comparison-plan comparison-plan-${plan.tone}`} scope="col" key={plan.id}>
+                  {plan.featured && <span className="comparison-badge">MÁS ELEGIDO</span>}
+                  {plan.tone === 'private' && <span className="availability-badge comparison-capacity">5 PLAZAS ACTIVAS</span>}
                   <span className="comparison-plan-name">{plan.title}</span>
-                  {plan.featured && <span className="comparison-badge">Más elegido</span>}
-                  {plan.tone === 'private' && <span className="comparison-capacity">5 plazas activas</span>}
                   <span className="comparison-price">{plan.price}</span>
                   <span className="comparison-duration">/ 90 días</span>
                 </th>

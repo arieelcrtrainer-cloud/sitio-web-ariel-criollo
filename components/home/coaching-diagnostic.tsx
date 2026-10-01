@@ -182,14 +182,14 @@ export function CoachingDiagnostic() {
             <h3 ref={resultRef} tabIndex={-1}>{recommendation.title}</h3>
             <p className="diagnostic-result-plan">{recommendation.plan}</p>
             <p className="diagnostic-result-price"><span>{recommendation.price}</span> / 90 días</p>
-            {recommendation.tone === 'private' && <p className="diagnostic-result-capacity">5 plazas activas</p>}
+            {recommendation.tone === 'private' && <p className="availability-badge diagnostic-result-capacity">5 PLAZAS ACTIVAS</p>}
             <p className="diagnostic-result-description">{recommendation.description}</p>
             <button className="diagnostic-reasons-toggle" type="button" aria-expanded={showReasons} onClick={() => setShowReasons((visible) => !visible)}>
               {showReasons ? 'Ocultar motivos' : '¿Por qué este nivel encaja contigo?'}
             </button>
             {showReasons && <ul className="diagnostic-reasons">{reasons.length > 0 ? reasons.map((reason) => <li key={reason}>{reason}</li>) : <li>Buscas un nivel de acompañamiento acorde con tus respuestas y con la autonomía que prefieres.</li>}</ul>}
             <p className="diagnostic-disclaimer">Esta recomendación se basa en tus respuestas y es orientativa. Para revisar tu caso personalmente, hace falta coordinar una evaluación con Ariel.</p>
-            <div className="diagnostic-result-actions"><a className="button button-primary" href="#coaching">Ver opciones de coaching</a><button className="diagnostic-restart" type="button" onClick={restart}>Volver a empezar</button></div>
+            <div className="diagnostic-result-actions"><a className="button button-primary conversion-cta diagnostic-result-cta" href="#coaching">VER OPCIONES DE COACHING</a><button className="diagnostic-restart" type="button" onClick={restart}>Volver a empezar</button></div>
           </div>
         )}
       </div>

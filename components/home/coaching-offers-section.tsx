@@ -5,6 +5,7 @@ const plans = [
     tone: 'basic',
     descriptor: 'Estructura para avanzar por tu cuenta.',
     price: '$97',
+    ctaLabel: 'Iniciar el coaching básico',
     description:
       'Un proceso de 90 días para que tengas claridad sobre qué hacer, cómo entrenar y cómo avanzar sin depender de acompañamiento constante.',
     features: [
@@ -20,6 +21,7 @@ const plans = [
     tone: 'personalized',
     descriptor: 'Supervisión que evoluciona contigo.',
     price: '$197',
+    ctaLabel: 'Aplicar al coaching personalizado',
     description:
       'Tu entrenamiento y estrategia nutricional son revisados semanalmente para adaptar el proceso a tu evolución.',
     features: [
@@ -36,6 +38,7 @@ const plans = [
     tone: 'private',
     descriptor: 'Acompañamiento privado y adaptación continua.',
     price: '$397',
+    ctaLabel: 'Postular al coaching privado 1:1',
     description:
       'Una experiencia de mayor intervención y acceso directo, diseñada para quienes buscan el máximo nivel de personalización.',
     features: [
@@ -65,28 +68,17 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
         <span className="plan-duration">/ 90 días</span>
       </p>
       <p className="plan-description">{plan.description}</p>
+      {plan.tone === 'private' && (
+        <p className="availability-badge plan-capacity-note">5 PLAZAS ACTIVAS</p>
+      )}
 
       <ul className="plan-features">
         {plan.features.map((feature) => <li key={feature}>{feature}</li>)}
       </ul>
 
-      {plan.id === 'coaching-basico' ? (
-        <details className="plan-details">
-          <summary>Ver detalles</summary>
-          <div className="plan-details-content">
-            <p>{plan.description}</p>
-            <p>Duración: 90 días.</p>
-          </div>
-        </details>
-      ) : (
-        <a className="button button-primary plan-cta" href="#diagnostico">
-          Descubrir mi nivel de coaching
-        </a>
-      )}
-
-      {plan.tone === 'private' && (
-        <p className="plan-capacity-note">5 plazas activas</p>
-      )}
+      <a className="button button-primary plan-cta plan-cta-animated" href="#diagnostico">
+        {plan.ctaLabel}
+      </a>
     </article>
   )
 }

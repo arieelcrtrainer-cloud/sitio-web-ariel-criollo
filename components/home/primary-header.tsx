@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const whatsappDiagnosticUrl = 'https://wa.me/?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20mi%20diagn%C3%B3stico%20gratuito%20con%20Ariel%20Criollo.'
+const whatsappDiagnosticUrl = 'https://wa.link/9g4eix'
 
 const navigation = [
   { label: 'Cómo funciona', href: '#proceso' },

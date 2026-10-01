@@ -1981,7 +1981,7 @@ a:focus-visible {
 
   .coaching-offers-heading {
     margin: 0 0 38px;
-    text-align: left;
+    text-align: center;
   }
 
   .coaching-offers-heading > p:last-child {
@@ -2520,7 +2520,8 @@ a:focus-visible {
 @media (max-width: 760px) {
   .comparison-section,
   .faq-section { width: calc(100% - 40px); padding-block: 78px 84px; }
-  .comparison-heading { margin-bottom: 28px; }
+  .comparison-heading { margin-bottom: 28px; text-align: center; }
+  .comparison-heading > p:last-child { margin-inline: auto; }
   .comparison-heading h2,
   .diagnostic-heading h2,
   .risk-intro h2,
@@ -3362,5 +3363,103 @@ a:focus-visible {
 
   .online-benefit {
     padding: 22px 6px;
+  }
+}
+
+.plan-card-basic .plan-price > span:first-child {
+  color: var(--plan-accent);
+}
+
+.comparison-plan-basic .comparison-price,
+.diagnostic-result-basic .diagnostic-result-price span {
+  color: #8e6bbf;
+}
+
+.plan-cta-animated {
+  --plan-cta-accent: var(--plan-accent);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--plan-cta-accent);
+  border-radius: 9999px;
+  padding-inline: 12px;
+  background: transparent;
+  color: var(--color-bone);
+  font-size: 9px;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.plan-cta-animated::before {
+  position: absolute;
+  z-index: -1;
+  inset: -1px;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--cta-angle),
+    transparent 0deg 326deg,
+    color-mix(in srgb, var(--plan-cta-accent) 18%, transparent) 337deg,
+    var(--plan-cta-accent) 347deg,
+    color-mix(in srgb, var(--plan-cta-accent) 24%, transparent) 355deg,
+    transparent 360deg
+  );
+  content: '';
+  animation: cta-perimeter-orbit 3s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.button-primary.plan-cta-animated:hover {
+  transform: none;
+  border-color: var(--plan-cta-accent);
+  background: transparent;
+  color: var(--color-bone);
+  opacity: 1;
+}
+
+.availability-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid #d66565;
+  border-radius: 5px;
+  padding: 6px 9px;
+  background: transparent;
+  color: #d66565;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  line-height: 1.3;
+  animation: availability-pulse 2s ease-in-out infinite;
+}
+
+.plan-card .availability-badge {
+  align-self: flex-start;
+}
+
+.diagnostic-result-capacity {
+  margin: 10px 0 0;
+}
+
+@keyframes availability-pulse {
+  0%, 100% { opacity: 0.82; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan-cta-animated::before,
+  .availability-badge {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .online-coaching-copy > p:not(.eyebrow) {
+    margin-inline: auto;
+    text-align: center;
   }
 }

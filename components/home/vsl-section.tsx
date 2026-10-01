@@ -11,7 +11,7 @@ export function VslSection() {
     <section className="vsl-section" id="como-funciona" aria-labelledby="vsl-title">
       <div className="vsl-copy">
         <p className="eyebrow">Una decisión informada</p>
-        <h2 id="vsl-title">Antes de tomar una decisión, quiero darte información <strong>para que puedas decidir</strong>.</h2>
+        <h2 id="vsl-title">Antes de tomar una decisión, quiero darte información <strong>para que puedas decidir.</strong></h2>
       </div>
 
       <div className="vsl-media-column">

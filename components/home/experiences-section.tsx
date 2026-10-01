@@ -4,7 +4,6 @@ const testimonials = [
     coaching: 'Coaching Privado 1:1',
     coachingType: 'private',
     videoId: 'sitnd2AwJyg',
-    format: 'portrait',
   },
   {
     name: 'Fernando Romero',
@@ -18,12 +17,31 @@ const testimonials = [
     coaching: 'Coaching Personalizado',
     coachingType: 'personalized',
     videoId: 'CjSAyyBX4q4',
-    format: 'portrait',
   },
 ]
 
-const googleReviews = ['01', '02', '03']
 const googleSearchUrl = 'https://www.google.com/search?q=Ariel+Criollo+rese%C3%B1as'
+
+const googleReviews = [
+  {
+    name: 'Santiago Corrales',
+    rating: '★★★★★',
+    text: 'Ariel es súper paciente y se acopla a las necesidades de cada persona, si estás empezando te hace sentir cómodo, te enseña y motiva a continuar',
+    url: googleSearchUrl,
+  },
+  {
+    name: 'Mikaela Sempértegui',
+    rating: '★★★★★',
+    text: 'Un excelente entrenador. Siempre demuestra compromiso, paciencia y motivación. Explica las técnicas de forma clara y se asegura de que todos mejoren constantemente. Además de enfocarse en el rendimiento, también fomenta la disciplina y la confianza',
+    url: googleSearchUrl,
+  },
+  {
+    name: 'Kary Lopez',
+    rating: '★★★★★',
+    text: 'Ariel es sin duda el profesional mas increíble que conozca, antes probé entrenar con varias personas de su medio y nadie me atinó, me hacían vivir contracturada y no tenía ganas de ejercitarme, los recomiendo 1000%. Su atención es personalizada y según tu necesidad, no solo ejercicios, el te enseña a ser integral, comida, descansos, ejercicio, etc',
+    url: googleSearchUrl,
+  },
+]
 
 export function ExperiencesSection() {
   return (
@@ -41,7 +59,7 @@ export function ExperiencesSection() {
       <div className="testimonial-grid" aria-label="Testimonios en video">
         {testimonials.map((testimonial) => (
           <article className="testimonial-item" key={testimonial.videoId}>
-            <div className={`testimonial-video-frame testimonial-video-${testimonial.format}`}>
+            <div className="testimonial-video-frame">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${testimonial.videoId}?rel=0&playsinline=1`}
                 title={`Testimonio en video de ${testimonial.name}`}
@@ -65,21 +83,21 @@ export function ExperiencesSection() {
         <div className="google-reviews-heading">
           <div>
             <p className="google-reviews-kicker">Reputación fuera de esta web</p>
-            <h3 id="google-reviews-title">85+ reseñas en Google</h3>
+            <h3 id="google-reviews-title">+85 reseñas en Google</h3>
           </div>
           <a className="google-reviews-link" href={googleSearchUrl} target="_blank" rel="noreferrer">
             Ver reseña en Google <span aria-hidden="true">→</span>
           </a>
         </div>
 
-        <div className="google-review-list" aria-label="Espacios para reseñas reales de Google" tabIndex={0}>
+        <div className="google-review-list" aria-label="Reseñas de clientes en Google">
           {googleReviews.map((review) => (
-            <article className="google-review-item" key={review}>
-              <span className="google-review-index" aria-hidden="true">{review}</span>
-              <div>
-                <p className="google-review-author">Nombre real pendiente</p>
-                <p className="google-review-excerpt">Extracto de reseña real pendiente de cargar.</p>
-                <a href={googleSearchUrl} target="_blank" rel="noreferrer">
+            <article className="google-review-item" key={review.name}>
+              <div className="google-review-content">
+                <span className="google-review-rating" aria-label="5 de 5 estrellas">{review.rating}</span>
+                <p className="google-review-author">{review.name}</p>
+                <blockquote className="google-review-excerpt">{review.text}</blockquote>
+                <a href={review.url} target="_blank" rel="noopener noreferrer">
                   Ver reseña en Google <span aria-hidden="true">→</span>
                 </a>
               </div>

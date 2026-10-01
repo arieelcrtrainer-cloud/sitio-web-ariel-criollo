@@ -10,7 +10,6 @@ const testimonials = [
     coaching: 'Coaching Privado 1:1',
     coachingType: 'private',
     videoId: 'eUC75jP3_3k',
-    format: 'landscape',
   },
   {
     name: 'Mary Silva',
@@ -21,25 +20,27 @@ const testimonials = [
 ]
 
 const googleSearchUrl = 'https://www.google.com/search?q=Ariel+Criollo+rese%C3%B1as'
+const googleReviewSearchUrl = (reviewer: string) =>
+  `https://www.google.com/search?q=${encodeURIComponent(`Ariel Criollo ${reviewer} reseña`)}`
 
 const googleReviews = [
   {
     name: 'Santiago Corrales',
     rating: '★★★★★',
     text: 'Ariel es súper paciente y se acopla a las necesidades de cada persona, si estás empezando te hace sentir cómodo, te enseña y motiva a continuar',
-    url: googleSearchUrl,
+    url: googleReviewSearchUrl('Santiago Corrales'),
   },
   {
     name: 'Mikaela Sempértegui',
     rating: '★★★★★',
     text: 'Un excelente entrenador. Siempre demuestra compromiso, paciencia y motivación. Explica las técnicas de forma clara y se asegura de que todos mejoren constantemente. Además de enfocarse en el rendimiento, también fomenta la disciplina y la confianza',
-    url: googleSearchUrl,
+    url: googleReviewSearchUrl('Mikaela Sempértegui'),
   },
   {
     name: 'Kary Lopez',
     rating: '★★★★★',
     text: 'Ariel es sin duda el profesional mas increíble que conozca, antes probé entrenar con varias personas de su medio y nadie me atinó, me hacían vivir contracturada y no tenía ganas de ejercitarme, los recomiendo 1000%. Su atención es personalizada y según tu necesidad, no solo ejercicios, el te enseña a ser integral, comida, descansos, ejercicio, etc',
-    url: googleSearchUrl,
+    url: googleReviewSearchUrl('Kary Lopez'),
   },
 ]
 

@@ -4,6 +4,8 @@ import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+const whatsappDiagnosticUrl = 'https://wa.me/?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20mi%20diagn%C3%B3stico%20gratuito%20con%20Ariel%20Criollo.'
+
 const navigation = [
   { label: 'Cómo funciona', href: '#proceso' },
   { label: 'Coaching', href: '#coaching' },
@@ -44,7 +46,7 @@ export function PrimaryHeader() {
           ))}
         </nav>
 
-        <a className="button button-primary conversion-cta header-cta" href="#diagnostico">
+        <a className="button button-primary conversion-cta header-cta" href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer">
           <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
           <span className="cta-arrow" aria-hidden="true">→</span>
         </a>
@@ -74,7 +76,7 @@ export function PrimaryHeader() {
           ))}
           <a
             className="button button-primary conversion-cta mobile-cta"
-            href="#diagnostico"
+            href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer"
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
           >
@@ -89,7 +91,7 @@ export function PrimaryHeader() {
 
 export function PrimaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary conversion-cta ${className}`.trim()} href="#diagnostico">
+    <a className={`button button-primary conversion-cta ${className}`.trim()} href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer">
       <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
       <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
@@ -98,7 +100,7 @@ export function PrimaryCta({ className = '' }: { className?: string }) {
 
 export function DiagnosticCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary conversion-cta ${className}`.trim()} href="#diagnostico">
+    <a className={`button button-primary conversion-cta ${className}`.trim()} href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer">
       <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
       <span className="cta-arrow" aria-hidden="true">→</span>
     </a>
@@ -107,7 +109,7 @@ export function DiagnosticCta({ className = '' }: { className?: string }) {
 
 export function SecondaryCta({ className = '' }: { className?: string }) {
   return (
-    <a className={`button button-primary button-secondary conversion-cta ${className}`.trim()} href="#diagnostico">
+    <a className={`button button-primary button-secondary conversion-cta ${className}`.trim()} href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer">
       <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
       <span className="cta-arrow" aria-hidden="true">→</span>
     </a>

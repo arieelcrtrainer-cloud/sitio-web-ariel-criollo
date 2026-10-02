@@ -3,7 +3,7 @@ export function RiskReductionSection() {
     <section className="risk-section" aria-labelledby="risk-title">
       <div className="risk-intro">
         <p className="eyebrow editorial-eyebrow">El Proceso de Selección</p>
-        <h2 id="risk-title">Empieza con claridad, no con incertidumbre.</h2>
+        <h2 id="risk-title">Claridad absoluta antes del primer paso.</h2>
         <p>
           No abrimos plazas a ciegas. Antes de iniciar cualquier programa, analizamos exhaustivamente tu punto de partida. El objetivo es determinar con precisión el nivel de intervención y exigencia que tu cuerpo y tu mente necesitan hoy.
         </p>

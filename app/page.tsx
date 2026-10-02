@@ -15,6 +15,7 @@ import { RiskReductionSection } from '@/components/home/risk-reduction-section'
 import { FaqSection } from '@/components/home/faq-section'
 import { FinalCtaSection } from '@/components/home/final-cta-section'
 import { SiteFooter } from '@/components/home/site-footer'
+import { RecentActivityNotification } from '@/components/home/recent-activity-notification'
 
 export default function Page() {
   return (
@@ -38,6 +39,7 @@ export default function Page() {
         <FinalCtaSection />
       </main>
       <SiteFooter />
+      <RecentActivityNotification />
     </>
   )
 }

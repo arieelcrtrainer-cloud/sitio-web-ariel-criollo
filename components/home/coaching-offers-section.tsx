@@ -26,7 +26,7 @@ const plans = [
       'Tu entrenamiento y estrategia nutricional son revisados semanalmente para adaptar el proceso a tu evolución.',
     features: [
       'Planificación personalizada',
-      'NutriMind + espacio de seguimiento',
+      'Herramientas de seguimiento',
       'Revisión cada viernes',
       'Ajustes según evolución',
     ],
@@ -45,7 +45,7 @@ const plans = [
       'Evaluación + sesión estratégica 1:1',
       'Planificación altamente personalizada',
       'Revisión semanal + intervención según necesidad',
-      'Acceso directo L–V',
+      'Acceso directo de Lunes a Viernes',
     ],
   },
 ]

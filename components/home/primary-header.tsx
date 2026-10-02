@@ -89,9 +89,9 @@ export function PrimaryHeader() {
   )
 }
 
-export function PrimaryCta({ className = '' }: { className?: string }) {
+export function PrimaryCta({ className = '', href = whatsappDiagnosticUrl, openInNewTab = true }: { className?: string; href?: string; openInNewTab?: boolean }) {
   return (
-    <a className={`button button-primary conversion-cta ${className}`.trim()} href={whatsappDiagnosticUrl} target="_blank" rel="noopener noreferrer">
+    <a className={`button button-primary conversion-cta ${className}`.trim()} href={href} target={openInNewTab ? '_blank' : undefined} rel={openInNewTab ? 'noopener noreferrer' : undefined}>
       <span className="cta-label">SOLICITAR DIAGNÓSTICO GRATUITO</span>
       <span className="cta-arrow" aria-hidden="true">→</span>
     </a>

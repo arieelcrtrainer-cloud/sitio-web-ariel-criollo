@@ -9,7 +9,7 @@ export function FinalCtaSection() {
         <p className="final-cta-description">
           Responde unas preguntas sobre tus objetivos y cómo prefieres entrenar. Recibirás una recomendación orientativa antes de elegir cómo continuar.
         </p>
-        <PrimaryCta className="final-cta-button" />
+        <PrimaryCta className="final-cta-button" href="#diagnostico" openInNewTab={false} />
         <p className="final-cta-note">Sin compromiso. El diagnóstico no envía tus respuestas.</p>
       </div>
     </section>

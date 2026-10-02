@@ -76,7 +76,12 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
         {plan.features.map((feature) => <li key={feature}>{feature}</li>)}
       </ul>
 
-      <a className="button button-primary plan-cta plan-cta-animated" href="#diagnostico">
+      <a
+        className="button button-primary plan-cta plan-cta-animated"
+        href={plan.tone === 'basic' ? 'https://wa.link/tbkbcy' : plan.tone === 'personalized' ? 'https://wa.link/4to26i' : 'https://wa.link/2an1n0'}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {plan.ctaLabel}
       </a>
     </article>

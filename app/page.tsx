@@ -3,7 +3,6 @@ import { HeroSection } from '@/components/home/hero-section'
 import { ResultsSection } from '@/components/home/results-section'
 import { VslSection } from '@/components/home/vsl-section'
 import { ProblemSection } from '@/components/home/problem-section'
-import { ReframeSection } from '@/components/home/reframe-section'
 import { ProcessSection } from '@/components/home/process-section'
 import { CoachingDimensionsSection } from '@/components/home/coaching-dimensions-section'
 import { ExperiencesSection } from '@/components/home/experiences-section'
@@ -26,7 +25,6 @@ export default function Page() {
         <ResultsSection />
         <VslSection />
         <ProblemSection />
-        <ReframeSection />
         <ProcessSection />
         <CoachingDimensionsSection />
         <ExperiencesSection />
